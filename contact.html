@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+	<meta name="title" content="The best online book shop, Edison">
+	<meta name="description" content="This is the best book shop in Ireland.">
+	<meta name="keyword" content="book store, book shop, easons books, book store contact number, book shop contact number">
+	<meta name="robots" content="index, follow">
+	
+	<!--link Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<!--link CSS file with html page-->
+	<link rel="stylesheet" href="../css/main.css">
+	
+</head>
+
+<body>
+    <!-- divs for headers-->
+	<div class="header1">	
+		<a href="index.html"><img src="../images/truck.png" alt="book panel">&nbsp;&nbsp;&nbsp;<i><b>FAST & FREE DELIVERY</b> ON ORDERS OVER €10</i></a>
+    </div>
+	<div class="header2">
+		<a href="index.html">Home</a>
+		<a href="About.html">About</a>
+		<a href="Contact.html" class="active">Contact</a>
+		<div class="right">
+			<a href="signin.html">Sign In/Register</a>
+		</div>
+    </div>
+
+	<!-- divs for the search area -->
+    <div>
+        <form class="search-form">
+			<table class="search-table">
+				<tr>
+					<td>
+						<a href="index.html"> <img src="../images/searchlogo.png" alt="Edison logo" class="searchlogo"></a>
+					</td>
+					<td>	
+						<input type="text" id="search" name='search' size="50" placeholder= "Search for books" class="search-input">
+						<input type='submit' id='sumbmit' value='Search' class="search-button">
+					</td>
+					<!-- A button to empty the cart -->
+					<td class="shopping-cart" data-product-count="0">
+						<span class="cart-icon" onclick="emptyCart()">&#128722;</span>
+					</td>  
+				</tr>
+			</table>
+		</form>
+    </div>
+
+
+    <!-- div for category -->
+    <div>
+		<table class="category-table">
+			<tr>
+				<td><a href="#">Top 10 sellers</a></td>			
+				<td><a href="#">Classics</a></td>
+				<td><a href="#">Fictions</a></td>
+				<td><a href="#">Fantasy</a></td>
+				<td><a href="#">Horror</a></td>
+				<td><a href="#">Adventure</a></td>
+				<td><a href="#">Crime</a></td>
+				<td><a href="#">Fairy tales</a></td>
+			</tr>
+		</table>		
+    </div>
+
+	<!-- put contact content in div for furthur styling-->
+
+	<div class="contact">
+		<div class="col">
+			<h5>Social media:</h5>
+			<p>
+				<a href=".html"><img src="../images/instagram.png" alt="Instagram">Instagram</a><br><br>
+				<a href=".html"><img src="../images/facebook.png" alt="Facebook">Facebook</a><br><br>
+				<a href=".html"><img src="../images/youtube.png" alt="YouTube">Youtube</a>
+			</p>
+		</div>
+		<div class="col">
+			<h5>Address:</h5>
+			<p>Edison.co<br>
+			Atrium B Building, Carmanhall Rd., Sandyford Industrial Estate<br>
+			Dublin18, Ireland</p>
+		</div>
+		<div class="col">
+			<h5>Call us:</h5>
+			<p>Edison.co<br>
+			+353 1 407 6849<br>
+			Atrium B Building, Carmanhall Rd., Sandyford Industrial Estate<br>
+			Dublin18, Ireland</p>
+		</div>
+	</div>
+
+	  <!--Google map-->
+	
+	<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+		<h4><i>find us on </i></h4>
+		<h3>
+			<strong>
+			<span class="g-blue"> G</span>
+			<span class="o-red">o</span>
+			<span class="o-yellow">o</span>
+			<span class="g-blue">g</span>
+			<span class="l-green">l</span>
+			<span class="o-red e-red">e</span>
+			</strong>
+			<span>Maps</span>
+		</h3>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.6630838047904!2d-6.217362708113042!3d53.27765610076845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670908b2230073%3A0xf16f5c43f4d6655d!2sCarmanhall%20Rd%2C%20Sandyford%2C%20Dublin!5e0!3m2!1sen!2sie!4v1681729287440!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+  
+  <!--Google Maps-->
+
+	<!-- div for sign up and connec t-->
+	<div class="center">
+		<table class="signup-table">
+			<tr>
+				<td>Sign up to our emails</td> 
+				<td>Connect with us</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" class="signup" onclick="sign_up()">SIGN UP</button>
+				</td> 
+				<td>
+				    <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+					<a href="#"><img src="../images/facebook.png" alt="Facebook"></a>
+					<a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+				</td>
+			</tr>
+		</table>
+			
+		<div id="dialog" style="display: none;">
+			<form id="signup-form">
+				<label>Email:</label>
+				<input type="text" name="Email" id="signup-email">
+				<button type="submit" id="signup-button" onclick="submitEmail()">Submit</button>
+			</form>	
+		</div>			
+	</div>
+
+    <!-- div for footer-->
+    <div class="center">
+		<table class="footer-table">
+			<tr>
+				<td><a href="index.html"> <img src="../images/Home.png" alt="Edison logo"></a></td>
+				<td><a href="About.html"> <img src="../images/Edisonlogo.png" alt="Edison logo"></a></td>
+				<td><a href="Contact.html"> <img src="../images/contact.png" alt="Edison logo"></a></td>
+				<td><a href="signin.html"> <img src="../images/Login.png" alt="Edison logo"></a></td>
+			</tr>
+			<tr>
+				<td><a href="index.html">HOME</a></td>
+				<td><a href="About.html">ABOUT</a></td>
+				<td><a href="Contact.html">CONTACT</a></td>
+				<td><a href="signin.html">LOGIN</a></td>
+			</tr>
+        </table>
+		<p> &copy; Edison co.2023</p>
+    </div>
+	<!--link JavaScript file with html page-->
+	<script defer src="../script/script.js"></script>  
+	<!--link jquery file with html page-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

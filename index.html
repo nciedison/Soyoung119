@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    
+	<title>index.html</title>
+
+	<meta name="title" content="The best online book shop|Edison">
+	<meta name="description" content="This is the best book shop in Ireland.">
+	<meta name="keyword" content="book store, book shop, easons books, amazon bookshop, book store near me">
+	<meta name="robots" content="index, follow">
+
+	<!--link Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<!--link main CSS file with html page-->
+    <link rel="stylesheet" href="../css/main.css">
+	<!--link soyoung CSS file with html page-->
+	<!-- <link rel="stylesheet" href="../css/soyoung.css"> -->
+
+</head>
+
+<body>
+    <!-- divs for headers-->
+	<div class="header1">	
+		<a href="#bestsellers"><img src="../images/truck.png" alt="book panel">&nbsp;&nbsp;&nbsp;<i><b>FAST & FREE DELIVERY</b> ON ORDERS OVER €10</i></a>
+    </div>
+	<div class="header2">
+		<a href="index.html" class="active">Home</a>
+		<a href="About.html">About</a>
+		<a href="Contact.html">Contact</a>
+		<div class="right">
+			<a href="signin.html">Sign In/Register</a>
+		</div>
+    </div>	
+	
+    <!-- divs for the search area -->
+    <div>
+        <form class="search-form">
+			<table class="search-table">
+				<tr>
+					<td>
+						<a href="index.html"> <img src="../images/searchlogo.png" alt="Edison logo" class="searchlogo"></a>
+					</td>
+					<td>	
+						<input type="text" id="search" name='search' size="50" placeholder= "Search for books" class="search-input">
+						<input type='submit' id='sumbmit' value='Search' class="search-button">
+					</td>	
+					<!-- A button to empty the cart -->
+					<td class="shopping-cart" data-product-count="0">
+						<span class="cart-icon" onclick="emptyCart()">&#128722;</span>
+					</td>  
+				</tr>
+			</table>
+		</form>
+    </div>
+
+    <!-- div for category -->
+    <div>
+		<table class="category-table">
+			<tr>
+				<td><a href="#">Top 10 sellers</a></td>			
+				<td><a href="#">Classics</a></td>
+				<td><a href="#">Fictions</a></td>
+				<td><a href="#">Fantasy</a></td>
+				<td><a href="#">Horror</a></td>
+				<td><a href="#">Adventure</a></td>
+				<td><a href="#">Crime</a></td>
+				<td><a href="#">Fairy tales</a></td>
+			</tr>
+		</table>		
+    </div>
+	
+    <!-- div for best seller image -->	
+	<div class="center">
+		<a href="#"><img src="../images/poster.jpeg" alt="book panel" class="bestseller"></a>
+	</div>
+
+	<!-- div for the best seller top 3 -->
+	<div class="center">
+		<h2 class="heading">BESTSELLER Top 3</h2>
+		<!-- put 3 pictures in another div to style pictures -->
+		<div class="top3" id="bestsellers">
+			<div class="box">
+				<!-- put every picture and an "add to basket" button in a span to make these 2 elements vertical -->
+				<a href="#"> <img src="../images/book2.jpg" alt="Mindful"></a>
+				<div class="vertical">
+					<p class="bookname"><b>MIND FULL</b></p>
+					<p class="price"><b>€12.99</b></p>
+					<button type="button" class="addtobasket" onclick="itemAdded()">Add to basket</button>
+				</div>	
+			</div>
+			<div class="box">
+				<a href="#"> <img src="../images/book3.jpg" alt="Guess how much I love you"></a>
+				<div class="vertical">
+					<p class="bookname"><b>GUESS HOW MUCH I LOVE YOU</b></p>
+					<p class="price"><b>€19.99</b></p>				
+					<button type="button" class="addtobasket" onclick="itemAdded()">Add to basket</button>
+				</div>	
+			</div>
+			<div class="box">
+				<a href="#"> <img src="../images/book4.jpg" alt="Eugene"></a>
+				<div class="vertical">
+					<p class="bookname"><b>EUGENE O'NEILL</b></p>
+					<p class="price"><b>€16.99</b></p>				
+					<button type="button" class="addtobasket" onclick="itemAdded()">Add to basket</button>
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+	<!-- div for book trailer -->
+	<div class="center">
+        <h2 class="heading">BOOK TRAILER</h2>
+        <iframe src="https://www.youtube.com/embed/1DVLDCgkR-g" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+	<div class="nav-page">
+		<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-end">
+	  			<li class="page-item disabled">
+					<a class="page-link" href="#" tabindex="-1">Previous</a>
+	  			</li>
+	  			<li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
+	  			<li class="page-item"><a class="page-link" href="#">2</a></li>
+	  			<li class="page-item"><a class="page-link" href="#">3</a></li>
+	  			<li class="page-item">
+					<a class="page-link" href="#">Next</a>
+	  			</li>
+			</ul>
+  		</nav>
+  	</div>
+
+	<!-- div for sign up and connect-->
+	<div class="center">
+		<table class="signup-table">
+			<tr>
+				<td>Sign up to our emails</td> 
+				<td>Connect with us</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" class="signup" onclick="sign_up()">SIGN UP</button>
+				</td> 
+				<td>
+				    <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+					<a href="#"><img src="../images/facebook.png" alt="Facebook"></a>
+					<a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+				</td>
+			</tr>
+		</table>
+			
+		<div id="dialog" style="display: none;">
+			<form id="signup-form">
+				<label>Email:</label>
+				<input type="text" name="Email" id="signup-email">
+				<button type="submit" id="signup-button" onclick="submitEmail()">Submit</button>
+			</form>	
+		</div>			
+	</div>
+
+
+    <!-- div for footer-->
+    <div class="center">
+		<table class="footer-table">
+			<tr>
+				<td><a href="index.html"> <img src="../images/Home.png" alt="Edison logo"></a></td>
+				<td><a href="About.html"> <img src="../images/Edisonlogo.png" alt="Edison logo"></a></td>
+				<td><a href="Contact.html"> <img src="../images/contact.png" alt="Edison logo"></a></td>
+				<td><a href="signin.html"> <img src="../images/Login.png" alt="Edison logo"></a></td>
+			</tr>
+			<tr>
+				<td><a href="index.html">HOME</a></td>
+				<td><a href="About.html">ABOUT</a></td>
+				<td><a href="Contact.html">CONTACT</a></td>
+				<td><a href="signin.html">LOGIN</a></td>
+			</tr>
+        </table>
+		<p> &copy; Edison co.2023</p>
+    </div>
+	
+	<!--link JavaScript file with html page-->
+	<script defer src="../script/script.js"></script>
+	<!--link jquery file with html page-->
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</body>
+</html>

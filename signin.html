@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Sign-in</title>
+
+	<meta name="title" content="The best online book shop, Edison">
+	<meta name="description" content="This is the best book shop in Ireland.">
+	<meta name="keyword" content="book store, book shop, easons books, amazon bookshop, book store near me">
+	<meta name="robots" content="index, follow">
+
+	<!--link CSS file with html page-->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- divs for headers-->
+	<div class="header1">	
+		<a href="index.html"><img src="../images/truck.png" alt="book panel">&nbsp;&nbsp;&nbsp;<i><b>FAST & FREE DELIVERY</b> ON ORDERS OVER €10</i></a>
+    </div>
+	<div class="header2">
+		<a href="index.html">Home</a>
+		<a href="About.html">About</a>
+		<a href="Contact.html">Contact</a>
+		<div class="right">
+			<a href="signin.html" class="active">Sign In/Register</a>
+		</div>
+    </div>
+
+    <!-- divs for the search area -->
+    <div>
+        <form class="search-form">
+			<table class="search-table">
+				<tr>
+					<td>
+						<a href="index.html"> <img src="../images/searchlogo.png" alt="Edison logo" class="searchlogo"></a>
+					</td>
+					<td>	
+						<input type="text" id="search" name='search' size="50" placeholder= "Search for books" class="search-input">
+						<input type='submit' id='sumbmit' value='Search' class="search-button">
+					</td>	
+					<!-- A button to empty the cart -->
+					<td class="shopping-cart" data-product-count="0">
+						<span class="cart-icon" onclick="emptyCart()">&#128722;</span>
+					</td>  
+				</tr>
+			</table>
+		</form>
+    </div>
+
+    <!-- div for category -->
+    <div>
+		<table class="category-table">
+			<tr>
+				<td><a href="#">Top 10 sellers</a></td>			
+				<td><a href="#">Classics</a></td>
+				<td><a href="#">Fictions</a></td>
+				<td><a href="#">Fantasy</a></td>
+				<td><a href="#">Horror</a></td>
+				<td><a href="#">Adventure</a></td>
+				<td><a href="#">Crime</a></td>
+				<td><a href="#">Fairy tales</a></td>
+			</tr>
+		</table>		
+    </div>
+
+	<!-- use div to put all the elements in a box -->
+	<div class="signin"> 
+		<!-- use form and table to make the content neat and aligned -->
+		<h1>SIGN IN</h1>
+		<form id="signin-form"><!--Table has been created inside of form to keep the form tidy -->
+			<table class="signin-table">
+				<tr>
+					<td>Sign in to your account</td>
+				</tr>
+				<tr>
+					<td>Email<sup>*</sup></td>
+				</tr>								
+				<tr>
+					<!--Placeholder used to give instructions, and required used to make sure it can't be skipped-->
+					<td><input type="text" name="Email" placeholder="please enter your email" required="required" id="email" class="signin-input"></td>
+				</tr>
+				<tr>
+					<td>Password<sup>*</sup></td>
+				</tr>
+				<tr>
+					<!--Set the password covered by "*"-->
+					<td><input type="password" name="password" placeholder="please enter your password" minlength="8" required="required" class="signin-input"></td>
+				</tr>
+				<tr>
+					<!--Set a check box-->
+					<td><input type="checkbox" name ="Remember me" value="Remember me"> &nbsp; Remember me</td>
+				</tr>            
+				<tr>
+					<!--Set a submit button, name it "login"-->
+					<td><input type="submit" value="LOGIN" class="signin-button"></td>
+				</tr> 
+				<tr>
+					<td>By logging in, you accept our terms and conditions</td>
+				</tr> 
+				<tr>
+					<td><a href="#"> <b>Forgot password?</b></a></td>
+				</tr>
+				<tr>
+					<td> &nbsp; </td>
+				</tr>				
+				<tr>
+					<td><b>Not Registered?</b></td>
+				</tr> 
+				<tr>
+					<!--Set a button, name it "CREATE AN ACCOUNT"-->
+					<td><button type="button" class="signin-button">CREATE AN ACCOUNT</button></td>
+				</tr> 
+			</table>
+		</form>
+		<div id="error"></div>
+	</div>
+	
+	<!-- div for sign up and connect-->
+	<div class="center">
+		<table class="signup-table">
+			<tr>
+				<td>Sign up to our emails</td> 
+				<td>Connect with us</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" class="signup" onclick="sign_up()">SIGN UP</button>
+				</td> 
+				<td>
+				    <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+					<a href="#"><img src="../images/facebook.png" alt="Facebook"></a>
+					<a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+				</td>
+			</tr>
+		</table>
+			
+		<div id="dialog" style="display: none;">
+			<form id="signup-form">
+				<label>Email:</label>
+				<input type="text" name="Email" id="signup-email">
+				<button type="submit" id="signup-button" onclick="submitEmail()">Submit</button>
+			</form>	
+		</div>			
+	</div>
+
+    <!-- div for footer-->
+    <div class="center">
+		<table class="footer-table">
+			<tr>
+				<td><a href="index.html"> <img src="../images/Home.png" alt="Edison logo"></a></td>
+				<td><a href="About.html"> <img src="../images/Edisonlogo.png" alt="Edison logo"></a></td>
+				<td><a href="Contact.html"> <img src="../images/contact.png" alt="Edison logo"></a></td>
+				<td><a href="signin.html"> <img src="../images/Login.png" alt="Edison logo"></a></td>
+			</tr>
+			<tr>
+				<td><a href="index.html">HOME</a></td>
+				<td><a href="About.html">ABOUT</a></td>
+				<td><a href="Contact.html">CONTACT</a></td>
+				<td><a href="signin.html">LOGIN</a></td>
+			</tr>
+        </table>
+		<p> &copy; Edison co.2023</p>
+    </div> 
+	<!--link JavaScript file with html page-->
+	<script src="../script/script.js"></script>
+	<!--link jquery file with html page-->
+	<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</body>
+</html>
